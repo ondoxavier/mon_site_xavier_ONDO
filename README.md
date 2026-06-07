@@ -76,12 +76,18 @@ Ne pas ajouter de mot de passe, clé API ou identifiant privé dans ce dépôt. 
 
 ## Domaine personnalisé
 
-Une fois le domaine acheté, ajouter le domaine dans `Settings > Pages > Custom domain`, puis configurer les DNS chez le registrar.
+Le domaine choisi est :
 
-Pour un sous-domaine `www`, créer un enregistrement `CNAME` vers :
+```text
+xavierondo.com
+```
+
+Ajouter ce domaine dans `Settings > Pages > Custom domain`, puis configurer les DNS chez OVH.
+
+Pour le sous-domaine `www.xavierondo.com`, créer un enregistrement `CNAME` vers :
 
 ```text
 ondoxavier.github.io
 ```
 
-Pour un domaine racine, créer les enregistrements `A` GitHub Pages indiqués dans la documentation officielle GitHub.
+Pour le domaine racine `xavierondo.com`, créer les enregistrements `A` GitHub Pages indiqués dans la documentation officielle GitHub.
