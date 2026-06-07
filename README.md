@@ -1,60 +1,52 @@
-# Portfolio professionnel de Xavier ONDO ESSONO
+# Portfolio React - Xavier ONDO ESSONO
 
-Portfolio Streamlit conçu pour une recherche de CDI en Data Science, AI Engineering et Data Engineering.
-
-## Positionnement
-
-Ce portfolio met en avant:
-- une expérience appliquée en environnement industriel
-- des projets IA présentés comme des cas concrets
-- un message orienté impact métier et industrialisation
-- un accès direct au CV et aux coordonnées
-
-## Structure du projet
-
-```text
-portfolio_xavier/
-├── portfolio.py
-├── assets/
-│   ├── profile.jpg
-│   └── project_images/
-│       ├── smart_pricing.png
-│       ├── yolow.png
-│       └── rag_contracts.png
-├── data/
-│   ├── CV_ONDO-ESSONO-Xavier.pdf
-├── requirements.txt
-└── README.md
-```
+Portfolio professionnel centré sur le CV, les expériences Data/IA, les projets sélectionnés et le rôle de co-fondateur d'Ogooué AI.
 
 ## Lancer le projet
 
 ```bash
-pip install -r requirements.txt
-streamlit run portfolio.py
+npm install
+npm run dev
 ```
 
-## Sections du portfolio
+Puis ouvrir l'URL affichée par Vite.
 
-- `Accueil` : proposition de valeur, chiffres clés, accès rapide au CV
-- `Expérience` : parcours professionnel orienté résultats
-- `Projets` : études de cas IA sélectionnées
-- `Compétences` : stack resserrée sur le positionnement CDI
-- `Formation` : parcours académique
-- `CDI` : type d'opportunités recherchées
-- `Contact` : email, téléphone et LinkedIn
+## Build de production
 
-## Personnalisation rapide
+```bash
+npm run build
+```
 
-- Modifier les textes de profil dans `PROFILE` dans `portfolio.py`
-- Ajuster les expériences dans `EXPERIENCES`
-- Mettre à jour les projets dans `PROJECTS`
-- Remplacer les visuels dans `assets/project_images/`
-- Déposer le CV PDF dans `data/`
+## Structure
 
-## Recommandations de diffusion
+```text
+portfolio_xavier/
+├── index.html
+├── package.json
+├── src/
+│   ├── main.jsx
+│   └── styles.css
+├── assets/
+│   ├── profile.jpg
+│   └── project_images/
+└── data/
+    └── CV_ONDO-ESSONO-Xavier.pdf
+```
 
-- Déployer sur Streamlit Community Cloud
-- Ajouter le lien du portfolio sur LinkedIn et sur le CV
-- Associer si possible des dépôts GitHub publics pour les projets démontrables
-- Utiliser une URL propre et un titre cohérent sur toutes les plateformes
+## Contenu à modifier
+
+- Profil, expériences, projets, compétences et Ogooué AI : `src/main.jsx`
+- Design responsive : `src/styles.css`
+- Photo : `assets/profile.jpg`
+- CV téléchargeable : `data/CV_ONDO-ESSONO-Xavier.pdf`
+
+## Ogooué AI
+
+La section Ogooué AI présente le positionnement public de l'entreprise :
+
+- Cabinet IA & Data pour organisations exigeantes
+- RAG chatbots, automatisation, analytics, MLOps, gouvernance et formation
+- Sprint Diagnostic, Prototype / POC, Déploiement & MCO
+- Contact public : `contact@ogooueia.com`
+
+Ne pas ajouter de mot de passe, clé API ou identifiant privé dans ce dépôt. Les secrets doivent rester dans un gestionnaire de mots de passe ou dans des variables d'environnement non versionnées.
