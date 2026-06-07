@@ -181,6 +181,37 @@ const education = [
   },
 ];
 
+const references = [
+  {
+    institution: "ALSTOM Services",
+    name: "M. CHI Si-An",
+    role: "Customer Services & Digitalization Director",
+    context: "Collaboration de 2 ans au sein de StationOne, filiale d'Alstom, puis d'Alstom.",
+    quote:
+      "Xavier occupait alors le poste d'apprenti Data Scientist, et ses compétences ainsi que son professionnalisme ont toujours été exemplaires.",
+    points: [
+      "Contribution à des projets de calcul de prix de vente à partir d'historiques d'achat, de vente et d'attributs pièces.",
+      "Analyse de commandes client PDF, parsing documentaire et intégration avec API.",
+      "Implémentation d'un RAG et intégration rapide auprès des équipes métier et techniques.",
+    ],
+    file: "/data/Lettre_de_recommandation_ALSTOM.pdf",
+  },
+  {
+    institution: "Université Gustave Eiffel",
+    name: "Jean Michel Torrenti",
+    role: "Chercheur au département Matériaux et Structures, professeur ENPC",
+    context: "Stage de 3 mois en 2023 sur l'application de techniques d'IA à la déformation différée des bétons.",
+    quote:
+      "Il a su se mettre à l'écoute de notre problématique, la comprendre, traiter les données et interpréter les résultats.",
+    points: [
+      "Maîtrise des outils IA et traitement de données appliqué à une problématique scientifique.",
+      "Capacité à comprendre un sujet éloigné du cursus initial et à interpréter les résultats.",
+      "Motivation, intégration au laboratoire et recommandation forte pour la poursuite du parcours.",
+    ],
+    file: "/data/lettre_de_recommandation_UGE.pdf",
+  },
+];
+
 function Icon({ children }) {
   return (
     <span className="icon" aria-hidden="true">
@@ -202,6 +233,7 @@ function App() {
           <a href="#experience">Expérience</a>
           <a href="#projets">Projets</a>
           <a href="#competences">Compétences</a>
+          <a href="#referents">Référents</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -404,6 +436,38 @@ function App() {
                 <span>{item.period}</span>
                 <h3>{item.degree}</h3>
                 <p>{item.school}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="referents" className="section references-section">
+          <div className="section-heading compact">
+            <p className="eyebrow">Référents</p>
+            <h2>Recommandations professionnelles</h2>
+            <p>
+              Deux recommandations vérifiables issues d'un environnement industriel et d'un laboratoire académique.
+              Elles documentent la rigueur, l'adaptabilité et la capacité à produire des résultats exploitables.
+            </p>
+          </div>
+          <div className="references-grid">
+            {references.map((reference) => (
+              <article className="reference-card" key={reference.institution}>
+                <div className="reference-top">
+                  <span>{reference.institution}</span>
+                  <a className="button secondary" href={reference.file} target="_blank" rel="noreferrer">
+                    <Icon>PDF</Icon> Voir la lettre
+                  </a>
+                </div>
+                <h3>{reference.name}</h3>
+                <p className="reference-role">{reference.role}</p>
+                <p className="reference-context">{reference.context}</p>
+                <blockquote>{reference.quote}</blockquote>
+                <ul>
+                  {reference.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>

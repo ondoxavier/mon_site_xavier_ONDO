@@ -62,6 +62,7 @@ portfolio_xavier/
 - Design responsive : `src/styles.css`
 - Photo : `assets/profile.jpg`
 - CV téléchargeable : `data/CV_ONDO-ESSONO-Xavier.pdf`
+- Lettres de recommandation publiques : `public/data/Lettre_de_recommandation_ALSTOM.pdf` et `public/data/lettre_de_recommandation_UGE.pdf`
 
 ## Ogooué AI
 
