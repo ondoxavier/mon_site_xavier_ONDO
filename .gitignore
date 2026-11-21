@@ -5,3 +5,7 @@ npm-debug.log*
 __pycache__/
 *.pyc
 data/contact_messages.csv
+test-results/
+playwright-report/
+screenshots/
+dist-ssr/

@@ -296,6 +296,11 @@ p {
   background: var(--bg-alt);
 }
 
+.nav a.is-active {
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+}
+
 .nav-cta {
   margin-left: 8px;
 }
@@ -359,7 +364,7 @@ p {
   inset: 0;
   border-radius: 50%;
   background: var(--success);
-  animation: pulse 2s ease-out infinite;
+  animation: pulse 2s ease-out 1s 3;
 }
 
 @keyframes pulse {
@@ -712,6 +717,7 @@ p {
 }
 
 .project-cover {
+  position: relative;
   display: grid;
   place-items: end start;
   height: 100%;
@@ -721,6 +727,23 @@ p {
   font-weight: 600;
   letter-spacing: 0.04em;
   background-size: 22px 22px, cover;
+}
+
+.project-cover span {
+  position: relative;
+}
+
+.cover-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 36px 20px 30px;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .cover-art {
+  transform: scale(1.04);
 }
 
 .project-cover--green {
@@ -778,9 +801,78 @@ p {
   font-size: 0.88rem !important;
 }
 
+.project-link {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
 .project-result svg {
   flex: none;
   margin-top: 2px;
+}
+
+/* Open source */
+.oss {
+  margin-top: 48px;
+}
+
+.oss-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.oss-head h3 {
+  font-size: 1.2rem;
+}
+
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.oss-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.oss-card:hover {
+  border-color: #cfd6ff;
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.oss-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.oss-title svg {
+  flex: none;
+}
+
+.oss-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.oss-tags {
+  margin-top: auto;
+  color: var(--accent-ink);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 /* Skills */
@@ -1134,6 +1226,10 @@ p {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .oss-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1168,6 +1264,10 @@ p {
     border-radius: 0;
     font-size: 1.05rem;
     color: var(--ink);
+  }
+
+  .nav a.is-active {
+    background: transparent;
   }
 
   .nav-cta {
