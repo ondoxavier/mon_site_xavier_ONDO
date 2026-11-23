@@ -801,9 +801,8 @@ function Venture() {
   return (
     <section className="section venture" aria-labelledby="ogooue-title">
       <div className="container venture-inner">
-        <div className="venture-logo" aria-hidden="true">
-          <span>Ogooué</span>
-          <strong>AI</strong>
+        <div className="venture-logo">
+          <img src="/assets/ogooue-logo.webp" alt="Logo Ogooué Intelligence" width="160" height="155" loading="lazy" />
         </div>
         <div className="venture-copy">
           <p className="eyebrow">Entrepreneuriat</p>
