@@ -551,7 +551,7 @@ function Hero() {
 
         <div className="hero-visual">
           <div className="portrait">
-            <img src={profile.photo} alt="Portrait de Xavier ONDO ESSONO" width="720" height="1124" fetchpriority="high" />
+            <img src={profile.photo} alt="Portrait de Xavier ONDO ESSONO" width="800" height="1000" fetchpriority="high" />
           </div>
           <div className="float-card float-card--top">
             <strong>RAG en production</strong>

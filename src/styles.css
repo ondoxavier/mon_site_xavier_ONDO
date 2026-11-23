@@ -236,16 +236,17 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(11, 18, 32, 0.94);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .topbar.is-scrolled {
-  border-bottom-color: var(--line);
-  box-shadow: var(--shadow-sm);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px -12px rgba(11, 18, 32, 0.6);
 }
 
 .topbar-inner {
@@ -285,24 +286,35 @@ p {
 .nav a:not(.button) {
   padding: 8px 12px;
   border-radius: 8px;
-  color: var(--muted);
+  color: #b4bdd0;
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .nav a:not(.button):hover {
-  color: var(--ink);
-  background: var(--bg-alt);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .nav a.is-active {
-  color: var(--accent-ink);
-  background: var(--accent-soft);
+  color: #fff;
+  background: rgba(61, 90, 254, 0.35);
 }
 
 .nav-cta {
   margin-left: 8px;
+}
+
+.topbar .button.primary {
+  background: #fff;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.topbar .button.primary:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 .menu-toggle {
@@ -310,10 +322,10 @@ p {
   place-items: center;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 12px;
-  background: #fff;
-  color: var(--ink);
+  background: transparent;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -1238,14 +1250,19 @@ p {
   }
 
   .nav {
+    /* .topbar a un backdrop-filter : il devient le bloc conteneur du panneau fixe,
+       d'où une hauteur explicite basée sur la fenêtre. */
     position: fixed;
-    inset: 68px 0 0;
+    inset: 68px 0 auto;
+    height: calc(100vh - 68px);
+    height: calc(100dvh - 68px);
+    overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
     padding: 20px clamp(20px, 5vw, 48px);
-    background: #fff;
-    border-top: 1px solid var(--line);
+    background: var(--ink);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -1260,14 +1277,15 @@ p {
 
   .nav a:not(.button) {
     padding: 14px 8px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0;
     font-size: 1.05rem;
-    color: var(--ink);
+    color: #e2e8f5;
   }
 
   .nav a.is-active {
     background: transparent;
+    color: #a5b4ff;
   }
 
   .nav-cta {

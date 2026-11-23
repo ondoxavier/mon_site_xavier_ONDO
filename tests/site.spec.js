@@ -47,6 +47,9 @@ test("le menu mobile s'ouvre et se ferme", async ({ page, isMobile }) => {
   await toggle.click();
   const link = page.locator("#main-nav").getByRole("link", { name: "Projets" });
   await expect(link).toBeVisible();
+  // le panneau doit couvrir l'écran sous la barre
+  const box = await page.locator("#main-nav").boundingBox();
+  expect(box.height).toBeGreaterThan(page.viewportSize().height * 0.8);
   await link.click();
   await expect(page.getByRole("button", { name: "Ouvrir le menu" })).toBeVisible();
 });
