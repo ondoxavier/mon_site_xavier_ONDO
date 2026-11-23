@@ -17,7 +17,7 @@ test("toutes les ressources et liens internes répondent 200", async ({ page, re
     document.querySelectorAll("img[src], a[href^='/'], link[href^='/']").forEach((el) => {
       set.add(el.getAttribute("src") || el.getAttribute("href"));
     });
-    ["/favicon.svg", "/robots.txt", "/sitemap.xml", "/assets/og-image.jpg"].forEach((u) => set.add(u));
+    ["/favicon.ico", "/favicon.png", "/apple-touch-icon.png", "/robots.txt", "/sitemap.xml", "/assets/og-image.jpg"].forEach((u) => set.add(u));
     return [...set];
   });
   for (const url of urls) {

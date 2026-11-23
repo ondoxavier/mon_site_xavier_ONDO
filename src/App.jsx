@@ -471,7 +471,7 @@ function Header() {
     <header className={`topbar${scrolled ? " is-scrolled" : ""}`}>
       <div className="container topbar-inner">
         <a className="brand" href="#accueil" onClick={() => setOpen(false)}>
-          <span className="brand-mark">XO</span>
+          <img className="brand-mark" src="/assets/logo-mark.webp" alt="" width="40" height="40" />
           <span className="brand-name">Xavier ONDO ESSONO</span>
         </a>
         <nav id="main-nav" className={`nav${open ? " is-open" : ""}`} aria-label="Navigation principale">
