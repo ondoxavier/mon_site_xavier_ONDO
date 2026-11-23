@@ -28,7 +28,7 @@ const nav = [
 ];
 
 const metrics = [
-  { value: "÷20", label: "Temps de recherche avec le RAG déployé chez Alstom (20 min → 1 min)" },
+  { value: "÷20", label: "Temps de recherche avec le RAG déployé en entreprise (20 min → 1 min)" },
   { value: "1M+", label: "Produits couverts par l'automatisation Smart Pricing" },
   { value: "2 ans", label: "D'alternance Data Scientist chez Alstom Transport" },
   { value: "Bac+5", label: "Master IA & Data — titre RNCP niveau 7" },
@@ -116,7 +116,7 @@ const experiences = [
 const projects = [
   {
     name: "RAG multimodal & Text-to-SQL",
-    context: "Alstom · Production",
+    context: "Projet industriel · Production",
     image: "/assets/projects/rag-multimodal.webp",
     summary:
       "Assistant qui interroge en langage naturel des bases PostgreSQL et des documents SharePoint, déployé dans Dataiku DSS.",
@@ -145,7 +145,7 @@ const projects = [
   },
   {
     name: "Smart Pricing",
-    context: "Alstom · Production",
+    context: "Projet industriel · Production",
     image: "/assets/projects/smart-pricing.webp",
     summary:
       "Recommandations tarifaires automatisées à partir de données techniques et historiques, intégrées dans Dataiku.",
@@ -163,7 +163,7 @@ const projects = [
   },
   {
     name: "Document AI",
-    context: "Alstom · Production",
+    context: "Projet industriel · Production",
     image: "/assets/projects/document-ai.webp",
     summary:
       "Transformation de documents PDF non structurés en données exploitables : parsing, OCR et modèles Hugging Face.",
@@ -555,7 +555,7 @@ function Hero() {
           </div>
           <div className="float-card float-card--top">
             <strong>RAG en production</strong>
-            <span>Alstom · 8 utilisateurs</span>
+            <span>Contexte industriel · 8 utilisateurs</span>
           </div>
           <div className="float-card float-card--bottom">
             <strong>÷20</strong>
@@ -647,7 +647,7 @@ function Projects() {
     <section id="projets" className="section">
       <div className="container">
         <SectionHeading eyebrow="Projets" title="Réalisations sélectionnées">
-          Projets en production chez Alstom, projets académiques et personnels autour de l'IA générative, de la vision
+          Projets en production en contexte industriel, projets académiques et personnels autour de l'IA générative, de la vision
           et du Machine Learning.
         </SectionHeading>
         <div className="project-grid">
