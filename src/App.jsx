@@ -15,7 +15,7 @@ const profile = {
   linkedin: "https://www.linkedin.com/in/xavier-ondo",
   github: "https://github.com/ondoxavier",
   cv: "/data/CV_ONDO_ESSONO_Xavier_AI_Engineer.pdf",
-  photo: "/assets/profile.webp",
+  photo: "/assets/profile-2026.webp",
 };
 
 const nav = [
